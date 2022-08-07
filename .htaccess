@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^cadastro/?$ pages/cadastro.php
+RewriteRule ^login/?$ pages/login.php
+RewriteRule ^post/(.*)?/?$ pages/post.php?slug=$1
+RewriteRule ^perfil/([a-zA-Z0-9\s_-]+)/?([a-z]+)?/?$ pages/perfil.php?user=$1&page=$2
